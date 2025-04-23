@@ -17,6 +17,8 @@ Welcome to this article. Today, I will demonstrate how to inject a process into 
 
 ## Code :
 
+Today’s focus is on a basic injection technique—more advanced and complex methods will be covered in future content.
+
 ```C++
 #include <windows.h>
 #include <stdio.h>
@@ -123,14 +125,14 @@ Now let's execute the code :
 
 ![image](https://github.com/user-attachments/assets/ed01f018-bf77-4c57-82e2-787de92ba1a8)
 
-The popped screen RTO: MalDev displays my shellcode, and it’s working well. However, it only functions if `explorer.exe` is open; otherwise, it doesn’t work. Now, it's time to check if the shellcode has truly been injected into the `explorer.exe` process.
+The popped screen **RTO: MalDev** displays my shellcode, and it’s working well. However, it only functions if `explorer.exe` is open; otherwise, it doesn’t work. Now, it's time to check if the shellcode has truly been injected into the `explorer.exe` process.
 
 To verify this, I use the Process Hacker. You can download it from the following link :
 
 > Download - Process Hacker\
 Process Hacker, A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect. [here](https://systeminformer.sourceforge.io/downloads)
 
-Let’s go to explorer threads.
+Let’s go to **explorer** threads.
 
 ![image](https://github.com/user-attachments/assets/f6d1a4f3-e444-4a83-a8b5-7ad4c3d0b37c)
 
@@ -151,6 +153,6 @@ In the malicious thread stack, you should see MessageBox, which corresponds to a
 
 This article has covered one of the simplest forms of code injection into a remote process. While this technique serves as a foundation, more advanced methods will be explored in future content.
 
-Thanks for reading! :smiley:
+Thanks for reading! ;)
 
 **-Malforge Group.**
