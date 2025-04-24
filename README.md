@@ -111,9 +111,9 @@ The code consists of three primary functions, each with a specific role:
 
 - **FindPID:** This function basically receives the name of one process, and return the PID (Process ID) from this process, to do this use `CreateToolhelp32Snapshot` to see all the current processes, and with `Process32First` and `Process32Next`, captures the PID from the previous and next processes executed in victim machine.
 
-- **Inject:** This function inject your shellcode to one process, to do this is very simple uses 3 other functions :\
-  1. `VirtualAllocEx`, here is creating little memory space in remote process to after inject code.\
-  2. `WriteProcessMemory` with this it’s moving the malicious shellcode to provious memory space created with `VirtualAllocEx`.\
+- **Inject:** This function inject your shellcode to one process, to do this is very simple uses 3 other functions :
+  1. `VirtualAllocEx`, here is creating little memory space in remote process to after inject code.
+  2. `WriteProcessMemory` with this it’s moving the malicious shellcode to provious memory space created with `VirtualAllocEx`.
   3. The last one is `CreateRemoteThread` this is to execute the memory location with your malicious code inside.
 
 - **Main:** This function basically are executing the last 2, and controlling errors from other 2 functions.
